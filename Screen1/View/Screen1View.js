@@ -4,10 +4,16 @@ import { connect } from 'react-redux'
 import { increment } from '../Actions/actions'
 import {navigate} from "../../Navigation/Actions/actions"
 import Screen1Styling from './Screen1Styling'
+import Intercom from 'react-native-intercom';
 
 class Screen1View extends Component {
   constructor (props) {
     super(props)
+  }
+
+  componentDidMount() {
+    Intercom.registerUnidentifiedUser()
+    Intercom.displayMessageComposer()
   }
 
   incrementz () {
@@ -18,7 +24,7 @@ class Screen1View extends Component {
     this.props.navigate("Screen2")
   }
 
-  render () {
+  render() {
     return (
       <View style={Screen1Styling.theStyle}>
         <Text style={Screen1Styling.title}>This is Screen 1</Text>
