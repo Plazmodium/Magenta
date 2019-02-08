@@ -1,11 +1,8 @@
-
-//RESOURCES: https://abc.danch.me/react-native-dynamic-styling-f8bd9d9629e9
-
 import { StyleSheet } from "react-native"
 import React, { Component } from 'react'
 
 
-const styleView1 = StyleSheet.create({
+const styleView2 = StyleSheet.create({
     theStyle: {
         flex: 1,
         justifyContent:"space-around",
@@ -13,7 +10,6 @@ const styleView1 = StyleSheet.create({
         width:"100%"
     },
     title: {
-        // backgroundColor: "red",
         fontSize: 40,
         textAlign: "center"
     },
@@ -21,11 +17,7 @@ const styleView1 = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         margin: 10,
-    },
-    numberStyling: {
-        fontSize: 30,
-        alignSelf: "center"
-    }
+      },
 })
 
-module.exports = styleView1
+module.exports = styleView2

@@ -1,6 +1,7 @@
 import { createStore, combineReducers, compose } from "redux";
 
 import storeReducerScreen1 from "../Screen1/Store/storeReducer";
+import storeNavigation from "../Navigation/Store/storeReducer"
 
 let composeEnhancers  = compose;
 
@@ -11,7 +12,8 @@ if(__DEV__){
 }
 
 const rootReducer = combineReducers({
-    reducer: storeReducerScreen1
+    reducer: storeReducerScreen1,
+    navigationReducer:storeNavigation
 });
 
 const configureStore = () => (

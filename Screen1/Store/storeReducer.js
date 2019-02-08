@@ -1,15 +1,18 @@
-import { BACKGROUND_CHANGED } from '../Actions/actionsTypes'
+import { NAVIGATE, INCREMENET } from '../Actions/actionsTypes'
 
 const initialState = {
-  backgroundState: false
+  navigationState: "",
+  numb: 0
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case BACKGROUND_CHANGED:
+
+    case INCREMENET:
       return Object.assign({}, state, {
-        backgroundState: action.backgroundState
+        numb: state.numb + 1
       })
+    
     default:
       return state
   }

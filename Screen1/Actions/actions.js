@@ -1,6 +1,6 @@
-import { BACKGROUND_CHANGED } from "./actionsTypes"
+import { INCREMENET } from "./actionsTypes"
 
-export const backgroundChanged = (backgroundState) => ({
-    type: BACKGROUND_CHANGED,
-    backgroundState: backgroundState
+export const increment = () => ({
+    type: INCREMENET
 })
+
